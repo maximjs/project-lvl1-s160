@@ -1,0 +1,19 @@
+{
+  "name": "brain-games-maxjs",
+  "version": "0.1.0",
+  "bin": {
+    "brain-games": "dist/bin/brain-games.js"
+  },
+  "devDependencies": {
+    "babel-cli": "*",
+    "babel-core": "*",
+    "babel-preset-env": "*",
+    "babel-preset-stage-0": "*",
+    "cross-env": "^5.1.1"
+  },
+  "scripts": {
+    "babel-node": "babel-node",
+    "build": "cross-env NODE_ENV=production babel src --out-dir dist --source-maps inline",
+    "prepublish": "npm run build"
+  }
+}
