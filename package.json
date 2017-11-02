@@ -1,8 +1,9 @@
 {
   "name": "brain-games-maxjs",
-  "version": "0.1.3",
+  "version": "0.1.6",
   "bin": {
-    "brain-games": "dist/bin/brain-games.js"
+    "brain-games": "dist/bin/brain-games.js",
+    "brain-even": "dist/bin/brain-even.js"
   },
   "author": "Maxim Kozlyakov",
   "devDependencies": {
@@ -20,7 +21,8 @@
     "babel-node": "babel-node",
     "build": "cross-env NODE_ENV=production babel src --out-dir dist --source-maps inline",
     "prepublish": "npm run build",
-    "eslint": "eslint src\\**\\*.js"
+    "eslint": "eslint src/**/*.js",
+    "run": "npm run babel-node -- src/bin/brain-games.js"
   },
   "dependencies": {
     "readline-sync": "^1.4.7"
