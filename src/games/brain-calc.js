@@ -2,7 +2,7 @@
 import { greeting, questionAndAnswer, randomNumber } from '..';
 
 export default () => {
-  const user = greeting('What is the result of the expression?');
+  const user = greeting('What is the result of the expression?\n');
   let countCorrectAnswers = 0;
   while (countCorrectAnswers < 3) {
     const randomNumber1 = randomNumber();
