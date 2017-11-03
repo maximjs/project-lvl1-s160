@@ -1,35 +1,29 @@
+import { randomNumber } from '..';
 
-import { greeting, questionAndAnswer, randomNumber } from '..';
+export const description = 'What is the result of the expression?\n';
+export const questionAndAnswer = () => {
+  const randomNumber1 = randomNumber();
+  const randomNumber2 = randomNumber();
+  const randomNumberOperator = randomNumber();
 
-export default () => {
-  const user = greeting('What is the result of the expression?\n');
-  let countCorrectAnswers = 0;
-  while (countCorrectAnswers < 3) {
-    const randomNumber1 = randomNumber();
-    const randomNumber2 = randomNumber();
-    const randomNumberOperator = randomNumber();
-
-    let operator = '';
-    if (randomNumberOperator <= 33) {
-      operator = '+';
-    } else if (randomNumberOperator <= 66) {
-      operator = '-';
-    } else {
-      operator = '*';
-    }
-
-    let correctAnswer = 0;
-    if (operator === '+') {
-      correctAnswer = randomNumber1 + randomNumber2;
-    } else if (operator === '-') {
-      correctAnswer = randomNumber1 - randomNumber2;
-    } else if (operator === '*') {
-      correctAnswer = randomNumber1 * randomNumber2;
-    }
-
-    const question = `${randomNumber1} ${operator} ${randomNumber2}`;
-    const count = questionAndAnswer(question, String(correctAnswer), user);
-    countCorrectAnswers += count;
+  let operator = '';
+  if (randomNumberOperator <= 33) {
+    operator = '+';
+  } else if (randomNumberOperator <= 66) {
+    operator = '-';
+  } else {
+    operator = '*';
   }
-  console.log(`Congratulations, ${user}!`);
+
+  let correctAnswer = 0;
+  if (operator === '+') {
+    correctAnswer = String(randomNumber1 + randomNumber2);
+  } else if (operator === '-') {
+    correctAnswer = String(randomNumber1 - randomNumber2);
+  } else if (operator === '*') {
+    correctAnswer = String(randomNumber1 * randomNumber2);
+  }
+
+  const question = `${randomNumber1} ${operator} ${randomNumber2}`;
+  return { question, correctAnswer };
 };
