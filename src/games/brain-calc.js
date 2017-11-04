@@ -1,7 +1,7 @@
-import { randomNumber } from '..';
+import gameEngine, { randomNumber } from '..';
 
-export const description = 'What is the result of the expression?\n';
-export const questionAndAnswer = () => {
+const description = 'What is the result of the expression?\n';
+const questionAndAnswer = () => {
   const randomNumber1 = randomNumber();
   const randomNumber2 = randomNumber();
   const randomNumberOperator = randomNumber();
@@ -27,3 +27,6 @@ export const questionAndAnswer = () => {
   const question = `${randomNumber1} ${operator} ${randomNumber2}`;
   return { question, correctAnswer };
 };
+
+const runGame = () => gameEngine(description, questionAndAnswer);
+export default runGame;

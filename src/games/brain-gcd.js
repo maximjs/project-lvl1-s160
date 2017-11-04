@@ -1,5 +1,4 @@
-
-import { randomNumber } from '..';
+import gameEngine, { randomNumber } from '..';
 
 const biggestCommonDivisor = (num1, num2) => {
   const iter = (counter, commonDivisor) => {
@@ -14,13 +13,15 @@ const biggestCommonDivisor = (num1, num2) => {
   return iter(1, 1);
 };
 
-export const description = 'Find the greatest common divisor of given numbers.\n';
+const description = 'Find the greatest common divisor of given numbers.\n';
 
-
-export const questionAndAnswer = () => {
+const questionAndAnswer = () => {
   const randomNumber1 = randomNumber();
   const randomNumber2 = randomNumber();
   const correctAnswer = String(biggestCommonDivisor(randomNumber1, randomNumber2));
   const question = ` ${randomNumber1} ${randomNumber2} `;
   return { question, correctAnswer };
 };
+
+const runGame = () => gameEngine(description, questionAndAnswer);
+export default runGame;

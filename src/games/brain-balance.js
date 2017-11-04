@@ -1,4 +1,6 @@
-export const description = 'Balance the given number.\n';
+import gameEngine from '..';
+
+const description = 'Balance the given number.\n';
 const randomNumber = () => Math.floor(Math.random() * 10000);
 
 const getBalancedArray = (array) => {
@@ -15,7 +17,7 @@ const getBalancedArray = (array) => {
   return getBalancedArray(newArr);
 };
 
-export const questionAndAnswer = () => {
+const questionAndAnswer = () => {
   const randNum = randomNumber();
   const randNumString = String(randNum);
   const randNumArr = randNumString.split('').map(el => Number(el));
@@ -23,3 +25,6 @@ export const questionAndAnswer = () => {
   const balancedNumber = Number(balancedArray.join(''));
   return { question: randNum, correctAnswer: String(balancedNumber) };
 };
+
+const runGame = () => gameEngine(description, questionAndAnswer);
+export default runGame;
