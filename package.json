@@ -1,12 +1,13 @@
 {
   "name": "brain-games-maxjs",
-  "version": "0.2.2",
+  "version": "0.2.4",
   "bin": {
     "brain-calc": "dist/bin/brain-calc.js",
     "brain-even": "dist/bin/brain-even.js",
     "brain-gcd": "dist/bin/brain-gcd.js",
     "brain-balance": "dist/bin/brain-balance.js",
-    "brain-progression": "dist/bin/brain-progression.js"
+    "brain-progression": "dist/bin/brain-progression.js",
+    "brain-prime": "dist/bin/brain-prime.js"
   },
   "author": "Maxim Kozlyakov",
   "devDependencies": {
