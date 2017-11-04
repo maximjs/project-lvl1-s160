@@ -1,6 +1,6 @@
 {
   "name": "brain-games-maxjs",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "bin": {
     "brain-calc": "dist/bin/brain-calc.js",
     "brain-even": "dist/bin/brain-even.js",
