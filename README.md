@@ -6,6 +6,14 @@
 $ npm install brain-games-maxjs
 ```
 
+Запуск:
+* $ brain-calc
+* $ brain-even
+* $ brain-gcd
+* $ brain-balance
+* $ brain-progression
+* $ brain-prime
+
 Использовались: npm, babel, eslint.  
 В рамках проекта было необходимо реализовать набор мини-игр, запускаемых из консоли. Эти игры похожи на то, что обычно называют "Brain Games".
 
