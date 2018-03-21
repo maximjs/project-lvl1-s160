@@ -9,6 +9,10 @@
     "brain-progression": "dist/bin/brain-progression.js",
     "brain-prime": "dist/bin/brain-prime.js"
   },
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/maximjs/project-lvl1-s160"
+  },
   "author": "Maxim Kozlyakov",
   "devDependencies": {
     "babel-cli": "*",
